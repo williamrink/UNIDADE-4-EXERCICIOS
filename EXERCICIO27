@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Uni4Exe27 {
+    public static void main(String[] args) {
+        
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Hora de chegada... ");
+        int horaEnt = teclado.nextInt();
+        System.out.print("Minuto de chegada... ");
+        int minEnt = teclado.nextInt();
+        System.out.print("Hora de saída... ");
+        int horaSai = teclado.nextInt();
+        System.out.print("Minuto de saída... ");
+        int minSai = teclado.nextInt();
+
+        if (horaEnt >= 0 && horaEnt <= 24 &&
+            minEnt >= 0 && minEnt <= 60 &&
+            horaSai >= 0 && horaSai <= 24 &&
+            minSai >= 0 && minSai <= 60 &&
+            horaEnt >= horaSai) {
+
+                int minEntTotal = (horaEnt * 60) + minEnt;
+                int minSaiTotal = (horaSai * 60) + minSai;
+                int minTotal = minSaiTotal - minEntTotal;
+                int nHoras = minTotal / 60;
+                int nMinutos = minTotal % 60;
+                System.out.printf("Ficou estacionado %dh%dm", nHoras, nMinutos);
+                if (nHoras >= 30) {
+                    nHoras++;
+                }
+
+                System.out.printf("Vai pagar por %d horas%n", nHoras);
+
+                double vCobrado = 0;
+                switch (nHoras) {
+                    case 0:
+                    case 1:
+                        vCobrado = 5;
+                        break;
+                    case 2:
+                        vCobrado = 10;
+                        break;
+                    case 3:
+                        vCobrado = 17.5;
+                        break;
+                    case 4:
+                        vCobrado = 25;
+                        break;
+                    default:
+                        vCobrado = 25 + (10 * (nHoras - 4));
+                        break;
+                    
+            }
+
+            System.out.printf("Valor obrado %.2f", vCobrado);
+
+
+        } else {
+            System.out.println("Hora/Minuto ERRADO");
+        } 
+        
+
+    }
+}
