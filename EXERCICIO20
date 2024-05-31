@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Uni4Exe20 {
+    public static void main(String[] args) {
+        
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Informe altura..: ");
+        float altura = teclado.nextFloat();
+        System.out.print("Informe o peso..: ");
+        float peso = teclado.nextFloat();
+        double imc = peso / Math.pow(altura, 2);
+
+        String classificacao = "";
+
+        if (imc < 18.5){
+            classificacao = "MAGREZA";
+        } else if (imc < 25){
+            classificacao = "SAUDÁVEL";
+        } else if (imc < 30){
+            classificacao = "SOBREPESO";
+        } else if (imc < 35){
+            classificacao = "OBESIDADE GRAU I";
+        } else if (imc < 40){
+            classificacao = "OBESIDADE GRAU II (SEVERA)";
+        } else{
+            classificacao = "OBESIDADE GRAU III (MÓRBIDA)";
+        }
+
+        System.out.printf("IMC é %.2f com grau de %s.", imc, classificacao);
+
+    }
+}
