@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Uni4Exe04 {
+
+    public static void main(String[] args) {
+        
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Informe um valor: ");
+        double valor = teclado.nextDouble();
+
+        if (valor % 1 == 0) {
+            System.out.println("Esse valor não tem casas decimais");
+        } else {
+            System.out.println("Esse valor tem casas decimais");
+        }
+    }
+
+}
