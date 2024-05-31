@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Uni4Exe24 {
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+System.out.print("Primeiro valor: ");
+         double valor1 = scan.nextDouble();
+
+         System.out.print("Segundo valor: ");
+         double valor2 = scan.nextDouble();
+
+         System.out.print("Terceiro valor:");
+         double valor3 = scan.nextDouble();
+
+         double maior;
+         double meio;
+         double menor;
+
+         if (valor1 > valor2 && valor1 > valor3) {
+             maior = valor1;
+         if (valor2 > valor3) {
+             meio = valor2;
+             menor = valor3;
+         } else{
+             meio = valor3;
+             menor = valor2;
+         }
+
+         } else if (valor2 > valor1 && valor2 > valor3) {
+             maior = valor2;
+         if (valor1 > valor3) {
+            meio = valor1;
+            menor = valor3;
+         } else{
+             meio = valor3;
+             menor = valor1;
+         }
+
+         } else {
+             maior = valor3;
+            if (valor1 > valor2) {
+                 meio = valor1;
+                 menor = valor2;
+             } else{
+                 meio = valor2;
+                 menor = valor1;
+             }
+         }   
+
+         System.out.println("\n(1) Crescente");
+         System.out.println("(2) Decrescente");
+         System.out.println("(3) Maior valor no meio");
+
+         switch (scan.nextInt()) {
+             case 1:
+                 System.out.printf("Ordem: %.1f, %.1f, %.1f\n", menor, meio, maior);
+             break;
+
+             case 2:
+                 System.out.printf("Ordem: %.1f, %.1f, %.1f\n", maior, meio, menor);
+             break;
+
+             case 3:
+                 System.out.printf("Ordem: %.1f, %.1f, %.1f\n", menor, maior, meio);
+             break;
+        
+             default:
+                System.out.println("Valor inválido, tente novamente!");
+             break;
+       }
+        }
+         }
