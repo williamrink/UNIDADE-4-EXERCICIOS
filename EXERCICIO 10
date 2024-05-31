@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Uni4Exe10 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Informe a idade de Marquinhos...");
+        int marq = teclado.nextInt();
+        System.out.print("Informe a idade de Zezinho...");
+        int zezi = teclado.nextInt();
+        System.out.print("Informe a idade de Luluzinha...");
+        int lulu = teclado.nextInt();
+
+        if (marq < zezi && marq < lulu) {
+
+            System.out.println("Marquinhos é o caçula.");
+        } else if (zezi < marq && zezi < lulu) {
+
+            System.out.println("Zezinho é o caçula.");
+        } else{
+
+            System.out.println("Luluzinha é o caçula.");
+        }
+    }
+
+}
