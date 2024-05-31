@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Uni4Exe11 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Insira a idade de um irmão");
+        int idade1 = teclado.nextInt();
+        System.out.println("Insira outra idade");
+        int idade2 = teclado.nextInt();
+        System.out.println("Insira a última idade");
+        int idade3 = teclado.nextInt();
+
+        if (idade1 == idade2 && idade2 == idade3){
+            System.out.println("Trigêmeos");
+        }else if (idade1 == idade2 && idade2 != idade3 || idade1 == idade3 && idade3 != idade2 
+        || idade2 == idade3 && idade2 != idade1){
+         System.out.println("Um irmão separado e gêmeos");
+        }else { 
+            System.out.println("Apenas irmãos ");
+        }
+    }
+}
