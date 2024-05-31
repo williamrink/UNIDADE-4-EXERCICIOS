@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Uni4Exe18 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+ System.out.println("Dia do vencimento: ");
+         int diaVencimento = teclado.nextInt();
+         System.out.println("Dia do pagamento: ");
+         int diaPagamento = teclado.nextInt();
+         System.out.println("Valor da prestação:");
+         double prestacao = teclado.nextDouble();
+
+         double valorTotal;
+         int atraso = diaPagamento - diaVencimento;
+
+         if (diaPagamento <= diaVencimento) {
+             double desconto = prestacao * 0.10;
+             valorTotal = prestacao - desconto;
+             System.out.println("Parabéns, você ganhou desconto por estar em dia com os pagamentos");
+             System.out.printf("Valor do desconto: R$%.2f\n ", desconto);
+            
+         } else if (diaPagamento <= diaVencimento + 5) {
+             valorTotal = prestacao;
+             System.out.println("Pagamento feito em até 5 dias após o vencimento");
+
+         } else{
+             double multa = prestacao * 0.02 * atraso;
+             valorTotal = prestacao + multa; 
+            System.out.println("Como o pagamento foi feito mais de 5 dias após o vencimento você recebeu uma multa de 2% ao dia!");
+             System.out.printf("Valor da multa: R$%.2f", multa);
+
+         }
+
+         System.out.printf("\nOValor total da prestação: R$ %.2f", valorTotal);
+}
+}
