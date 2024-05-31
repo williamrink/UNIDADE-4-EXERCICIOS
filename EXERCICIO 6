@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Uni4Exe06 {
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Escreva qual seu gênero usado M: masculino, F: feminino, I: Não definido.");
+        char genero = teclado.nextLine().charAt(0);
+        genero = Character.toUpperCase(genero);
+
+        if (genero == 'M') {
+            System.out.println("Masculino");
+
+        } else if (genero == 'F'){
+            System.out.println("Feminino");
+
+        } else if (genero == 'I'){
+            System.out.println("Indefinido");
+        } else {
+            System.out.println("Letra não computada pelo sistema.");
+        }
+        
+    }
+}
