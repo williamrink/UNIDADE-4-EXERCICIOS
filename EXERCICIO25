@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Uni4Exe25 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("1 - Soma de dois números.");
+        System.out.println("2 - Diferença entre dois números.");
+        System.out.println("3 - Produto entre dois números.");
+        System.out.println("4 - Divisão entre dois números (o denominador não pode ser zero).");
+        int ope = teclado.nextInt();
+
+        if (ope == 1){
+            System.out.print("Informe valor 1...");
+            float valor1 = teclado.nextFloat();
+            System.out.print("Informe valor 2...");
+            float valor2 = teclado.nextFloat();
+            float resu = valor1 + valor2;
+            System.out.printf("Resultado é %.2f", resu);
+        } else if (ope == 2){
+            System.out.print("Informe valor 1...");
+            float valor1 = teclado.nextFloat();
+            System.out.print("Informe valor 2...");
+            float valor2 = teclado.nextFloat();
+            float resu = valor1 - valor2;
+            System.out.printf("Resultado é %.2f", resu);
+        } else if (ope == 3){
+            System.out.print("Informe valor 1...");
+            float valor1 = teclado.nextFloat();
+            System.out.print("Informe valor 2...");
+            float valor2 = teclado.nextFloat();
+            float resu = valor1 * valor2;
+            System.out.printf("Resultado é %.2f", resu);
+        } else if (ope == 4){
+            System.out.print("Informe valor 1...");
+            float valor1 = teclado.nextFloat();
+            System.out.print("Informe valor 2...");
+            float valor2 = teclado.nextFloat();
+            float resu = valor1 / valor2;
+            System.out.printf("Resultado é %.2f", resu);
+        } else {
+            System.out.println("Operação Inválida");
+        }
+    }
+
+}
