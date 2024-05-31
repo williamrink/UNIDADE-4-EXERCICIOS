@@ -1,25 +1,25 @@
 import java.util.Scanner;
 
-public class Exercicio1Uni4 {
-
+public class Uni4Exe01 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
 
-        //numeros pares
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Horas trabalhadas no mês: ");
+        float nHoras = teclado.nextFloat();
+        System.out.print("Valor da hora: ");
+        float vHora = teclado.nextFloat();
+        
+        float sTotal = nHoras * vHora;
 
-        // while (true) {
+        if (nHoras > 160) {
 
+            float sExtra = (nHoras - 160) * (vHora / 2);
+            sTotal = sTotal + sExtra;
 
-        //       int numero = scan.nextInt();
-        //     if(numero % 2 == 0){
-        //         System.out.println("Par");
-        //         if(numero > 1000 ){
-        //             System.out.println("Número é maior que mil");
-        //         }
-        //     }
-        //     if(numero % 2 != 0){
-        //         System.out.println("Ímpar");
-        //     }
-  
+        }
 
-        // }
+        System.out.printf("O salário total é: %.2f%n", sTotal);
+    }
+
+}
