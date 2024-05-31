@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Uni4Exe15 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Informe há quantos meses foi admitido...");
+        int qMes = teclado.nextInt();
+
+        if (qMes <= 12) {
+            System.out.println("Seu reajuste será de 5%");
+        } else if (qMes >= 13 && qMes <= 48){
+            System.out.println("Seu reajuste será de 7%");
+        } else {
+            System.out.println("Quantidade de meses inválida");
+        }
+        
+
+    }
+
+}
