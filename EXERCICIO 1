@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Exercicio1Uni4 {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        //numeros pares
+
+        // while (true) {
+
+
+        //       int numero = scan.nextInt();
+        //     if(numero % 2 == 0){
+        //         System.out.println("Par");
+        //         if(numero > 1000 ){
+        //             System.out.println("Número é maior que mil");
+        //         }
+        //     }
+        //     if(numero % 2 != 0){
+        //         System.out.println("Ímpar");
+        //     }
+  
+
+        // }
