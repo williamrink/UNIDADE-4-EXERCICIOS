@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Uni4Exe16 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Informe a idade do homem 1...");
+        int homem1 = teclado.nextInt();
+        System.out.print("Informe a idade do homem 2...");
+        int homem2 = teclado.nextInt();
+        System.out.print("Informe a idade do mulher 1...");
+        int mulher1 = teclado.nextInt();
+        System.out.print("Informe a idade do mulher 2...");
+        int mulher2 = teclado.nextInt();
+
+        if (homem1 > homem2 && mulher1 > mulher2){
+            int soma = homem1 + mulher2;
+            System.out.println("Soma da idade dos mais velhos: " + soma);
+            int produto = homem2 * mulher1;
+            System.out.println("Produto da idade do homem mais novo com a mulher mais velha: " + produto);
+        } else if (homem1 > homem2 && mulher1 < mulher2){
+            int soma = homem1 + mulher1;
+            System.out.println("Soma da idade dos mais velhos: " + soma);
+            int produto = homem2 * mulher2; 
+            System.out.println("Produto da idade do homem mais novo com a mulher mais velha: " + produto);
+        } else if (homem1 < homem2 && mulher1 > mulher2){
+            int soma = homem2 + mulher2;
+            System.out.println("Soma da idade dos mais velhos: " + soma);
+            int produto = homem1 * mulher1;
+            System.out.println("Produto da idade do homem mais novo com a mulher mais velha: " + produto);
+        } else {
+            int soma = homem2 + mulher1;
+            System.out.println("Soma da idade dos mais velhos: " + soma);
+            int produto = homem1 * mulher2;
+            System.out.println("Produto da idade do homem mais novo com a mulher mais velha: " + produto);
+        }
+    }
+
+}
